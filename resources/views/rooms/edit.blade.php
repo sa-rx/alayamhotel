@@ -2,9 +2,9 @@
 
 @section('content')
 
-
-<form class="" action="{{route('room.store')}}" method="post">
+<form class="" action="{{route('room.update',$room)}}" method="post">
                     @csrf
+                    @method('PATCH')
 
                         <div class="form-group">
                             <label for="name"> الاسم </label>
@@ -48,5 +48,4 @@
                         </div>
 
                     </form>
-
-@endsection
+                    @endsection

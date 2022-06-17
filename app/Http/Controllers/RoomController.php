@@ -49,7 +49,7 @@ class RoomController extends Controller
      */
     public function show(Room $room)
     {
-        //
+        return view('rooms.show',compact('room'));
     }
 
     /**
@@ -60,7 +60,7 @@ class RoomController extends Controller
      */
     public function edit(Room $room)
     {
-        //
+        return view('rooms.edit',compact('room'));
     }
 
     /**
@@ -72,7 +72,8 @@ class RoomController extends Controller
      */
     public function update(Request $request, Room $room)
     {
-        //
+        $room->update($request->all());
+
     }
 
     /**
@@ -83,6 +84,6 @@ class RoomController extends Controller
      */
     public function destroy(Room $room)
     {
-        //
+        $room->delete();
     }
 }
