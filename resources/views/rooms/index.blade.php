@@ -4,6 +4,7 @@
 
 
 
+<a href="{{route('room.create')}}" class="btn btn-dange">create</a>
 
    @forelse($rooms as $room)
 <div class="card" style="width: 18rem;">
